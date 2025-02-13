@@ -1,8 +1,51 @@
-# React + Vite
+## **ข้อสอบปฏิบัติสำหรับ Front-end React Developer**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### **ข้อ 1: สร้าง To-do List (พื้นฐาน React)**
 
-Currently, two official plugins are available:
+**เงื่อนไข:**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ให้สร้าง **React Component** สำหรับ To-do List
+- ผู้ใช้สามารถ **เพิ่ม, ลบ, และทำเครื่องหมายว่างานเสร็จแล้ว**
+- ใช้ **useState** และ **localStorage** เก็บข้อมูล
+
+**ตัวอย่าง UI:**
+
+```
+------------------
+Todo List
+------------------
+[ ] เรียน React
+[X] ทำโจทย์ข้อสอบ
+[ ] อ่านหนังสือ
+------------------
+เพิ่มรายการ: [_________] [ เพิ่ม ]
+
+```
+
+### **ข้อ 2: ดึงข้อมูลจาก API และแสดงในตาราง (การทำงานกับ API)**
+
+**เงื่อนไข:**
+
+- ดึงข้อมูลจาก **API ของ JSONPlaceholder**
+    
+    ```bash
+    https://jsonplaceholder.typicode.com/users
+    ```
+    
+- แสดงข้อมูลเป็น **ตาราง** (`name`, `email`, `phone`)
+- มีช่อง **ค้นหาชื่อผู้ใช้**
+- ถ้ากดที่ชื่อ **ให้แสดงรายละเอียดเพิ่มเติม**
+
+### **ข้อ 3: React Form Validation (การจัดการฟอร์ม)**
+
+**เงื่อนไข:**
+
+- สร้างฟอร์มลงทะเบียนที่มี
+    - ชื่อ
+    - อีเมล
+    - รหัสผ่าน
+- ตรวจสอบ
+    - **ชื่อ** ห้ามว่าง
+    - **อีเมล** ต้องเป็นรูปแบบที่ถูกต้อง
+    - **รหัสผ่าน** ต้องมากกว่า 8 ตัวอักษร
+- ถ้าข้อมูลผิด ให้แสดง **ข้อความแจ้งเตือน**
